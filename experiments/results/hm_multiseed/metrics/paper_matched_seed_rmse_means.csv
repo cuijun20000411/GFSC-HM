@@ -1,0 +1,4 @@
+pollutant,matched_seeds,RM_mean_pooled_RMSE,HM_mean_pooled_RMSE,HM_vs_RM_percent_from_seed_means
+no2,"42,43,44",4.35069115,4.17253186,-4.09496521
+o3,"42,43,44",4.54726871,4.52138682,-0.56917442
+pm25,"42,43,44",10.50998468,10.40793808,-0.97094915

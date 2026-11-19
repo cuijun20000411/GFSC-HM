@@ -1,0 +1,47 @@
+{
+  "experiment_version": "d3hm_fixed_model_density_stress_v1",
+  "density_seed": 42,
+  "d3hm_training_seed": 42,
+  "device": "cuda",
+  "candidate_model": "D3HM",
+  "candidate_definition": "D3 architecture trained with balanced random/contiguous masking",
+  "model_root": "/etc/cj/boundary/gfsc_unet_d3_hybrid_mask_v1/loso/D3HM",
+  "d3_reference_root": "/etc/cj/boundary/f3_direct_ablation_final_strict_v1",
+  "expected_model_version": "gfsc_unet_d3_hybrid_mask_v1",
+  "pollutants": [
+    "no2",
+    "o3",
+    "pm25"
+  ],
+  "models": [
+    "D3HM",
+    "SpatialMean",
+    "NearestNeighbor",
+    "IDW",
+    "KNN"
+  ],
+  "additional_hidden_station_ratios": [
+    0.0,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "positive_ratio_repeats": 10,
+  "zero_ratio_repeats": 1,
+  "evaluation_batch_size": 1,
+  "outer_protocol": "station-wise strict LOSO",
+  "outer_target_history_used": false,
+  "additional_hidden_station_history_used_during_original_training": true,
+  "experiment_interpretation": "fixed-model observation sparsification test",
+  "retraining": false,
+  "prediction_clipping": false,
+  "fixed_subset_within_scenario": true,
+  "subset_shared_by_all_methods": true,
+  "derived_features_recomputed_after_hiding": true,
+  "idw_knn_tuning": "inner validation stations only; outer station excluded",
+  "zero_hidden_check": "inputs and raw predictions must reproduce the stored D3-HM strict-LOSO outputs",
+  "require_stored_d3hm_reference": true,
+  "zero_reference_atol": 1e-05,
+  "paired_d3_comparison": true,
+  "d3_density_result_root": "/etc/cj/boundary/d3_density_stress_final_strict_v1"
+}
