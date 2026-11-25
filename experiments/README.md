@@ -12,6 +12,29 @@ D3 denotes GFSC-UNet-RM and D3HM denotes GFSC-UNet-HM in the archived filenames 
 | Test-time station reduction | [d3hm_density_stress_final_strict.py](code/d3hm_density_stress_final_strict.py), [density_stress_final_strict.py](code/density_stress_final_strict.py) |
 | GPU forward-pass benchmark | [03_d3hm_complexity_efficiency.py](../tools/benchmark/03_d3hm_complexity_efficiency.py) |
 
+## Server environment
+
+The following versions were recorded in the current experiment
+environment. See [requirements.txt](../requirements.txt) for the project
+dependencies. The GPU reported for the paper's experiments is an NVIDIA
+GeForce RTX 3090.
+
+| Component | Recorded version |
+|---|---|
+| OS | Linux x86-64, kernel 6.8.0-147-generic, glibc 2.39 |
+| Python | 3.12.3 |
+| PyTorch | 2.9.1 |
+| CUDA build reported by PyTorch | 12.8 (CUDA available) |
+| NVIDIA driver | 575.57.08 |
+| NumPy | 2.2.6 |
+| pandas | 2.3.3 |
+| SciPy | 1.17.0 |
+| scikit-learn | 1.8.0 |
+| joblib | 1.5.3 |
+| Matplotlib | 3.10.8 |
+| XGBoost | 3.2.0 |
+| PyKrige (optional, for ordinary kriging) | 1.7.3 |
+
 ## Prepare the model inputs
 
 Open the repository root in Bash on Linux or WSL. Use Python 3.10 or later and install the packages in [requirements.txt](../requirements.txt) in your experiment environment.
